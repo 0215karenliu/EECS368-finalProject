@@ -25,7 +25,7 @@ function collision(head,array){
 function draw(){
     context.fillStyle = 'black';
     context.fillRect(0, 0, canvas.width, canvas.height);
-	context.fillStyle = 'red';
+    context.fillStyle = 'red';
     context.fillRect(apple.x, apple.y, box, box);
     for( let i = 0; i < snake.length ; i++){
         context.fillStyle = ( i == 0 )? 'grey' : 'white';
