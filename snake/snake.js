@@ -29,7 +29,7 @@ function draw(){
     context.fillRect(apple.x, apple.y, box, box);
     for( let i = 0; i < snake.length ; i++){
         context.fillStyle = ( i == 0 )? 'grey' : 'white';
-        context.fillRect(snake[i].x,snake[i].y,box,box);
+        context.fillRect(snake[i].x, snake[i].y, box, box);
     }
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -44,7 +44,7 @@ function draw(){
         snake.pop();
     }
     let newHead = {x : snakeX, y : snakeY};
-	if(snakeX < box || snakeX > 17 * box  || snakeY > 17 * box || snakeY < 2 * box || collision(newHead,snake)){
+	if(snakeX < box || snakeX > 17 * box  || snakeY > 17 * box || snakeY < 2 * box || collision(newHead, snake)){
         clearInterval(game);
         context.fillStyle = 'white';
         context.font = "80px Times New Roman";
@@ -56,4 +56,4 @@ function draw(){
     context.fillText(score, box, 1.5 * box);
 }
 
-let game = setInterval(draw,100);
+let game = setInterval(draw, 100);
